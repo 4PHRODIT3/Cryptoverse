@@ -1,0 +1,47 @@
+.cryptoverse__container {
+  @apply py-5 px-7 flex justify-between items-center;
+}
+
+.cryptoverse__container-brand {
+  @apply flex items-center cursor-pointer;
+}
+
+.cryptoverse__container-brand img {
+  @apply w-7 h-7 mr-2 md:mr-4 md:w-9 md:h-9  xl:w-11 xl:h-11;
+}
+
+.cryptoverse__container-brand h1 {
+  @apply text-2xl md:text-3xl xl:text-4xl leading-relaxed;
+}
+
+.cryptoverse__container-links-container {
+  @apply items-center text-white hidden xl:flex;
+}
+
+.cryptoverse__container-links-container__link {
+  @apply flex xl:mx-10 mx-8 my-4 xl:my-0 items-center;
+}
+
+.cryptoverse__container-links-container__link__text {
+  @apply text-lg xl:text-base group-hover:text-text-red;
+}
+
+.cryptoverse__container-links-container__link__icon {
+  @apply h-5 text-white mr-3 xl:mr-2 group-hover:-translate-x-1 cursor-pointer;
+}
+
+.cryptoverse__container-menu {
+  @apply sm:block xl:hidden;
+}
+
+.cryptoverse__container-menu-button {
+  @apply flex items-center justify-center active:bg-transparent;
+}
+
+.cryptoverse__container-menu-button-icon {
+  @apply h-7 w-7 md:w-10 md:h-10 text-white  p-1;
+}
+
+.cryptoverse__container-mobile-links-container {
+  @apply text-white fixed w-screen pt-5 left-0 h-60 z-10;
+}
