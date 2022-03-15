@@ -32,10 +32,12 @@ const Navbar = () => {
   const [toggleMenu,setToggleMenu] = useState(false);
   return (
     <div className='cryptoverse__container'>
-        <div className='cryptoverse__container-brand'>
-            <img src={logo} alt="Cryptoverse Logo" />
-            <h1 className='gradient-text'>Cryptoverse</h1>
-        </div>
+        <Link to="/">
+          <div className='cryptoverse__container-brand'>
+              <img src={logo} alt="Cryptoverse Logo" />
+              <h1 className='gradient-text'>Cryptoverse</h1>
+          </div>
+        </Link>
         <div className='cryptoverse__container-links-container'>
           <MenuItems />
         </div>

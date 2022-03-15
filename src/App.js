@@ -1,6 +1,7 @@
 import React from 'react';
 import "./index.css";
-import { Navbar } from './components'
+import { Navbar,Home,Cryptocurrencies,News,Exchanges,CryptoDetails } from './components';
+import { Routes, Route } from 'react-router-dom';
 
 const App = () => {
   return (
@@ -9,7 +10,13 @@ const App = () => {
         <Navbar />
       </div>
       <div>
-        
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/exchanges' element={<Exchanges />} />
+          <Route path='/cryptocurrencies' element={<Cryptocurrencies />} />
+          <Route path='/cryptocurrency/:coinID' element={<CryptoDetails />} />
+          <Route path='/news' element={<News />} />
+        </Routes>
       </div>
     </div>
   )
