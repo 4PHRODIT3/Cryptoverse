@@ -1,5 +1,5 @@
 .cryptoverse__container {
-  @apply py-5 px-7 flex justify-between items-center;
+  @apply py-5 px-7 flex justify-between items-center fixed w-screen bg-main z-10;
 }
 
 .cryptoverse__container-brand {
@@ -43,5 +43,5 @@
 }
 
 .cryptoverse__container-mobile-links-container {
-  @apply text-white fixed w-screen pt-5 left-0 h-60 z-10;
+  @apply text-white fixed w-screen pt-5 left-0 h-60 z-10 bg-main;
 }

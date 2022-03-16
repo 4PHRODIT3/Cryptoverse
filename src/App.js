@@ -6,7 +6,7 @@ import { Routes, Route } from 'react-router-dom';
 const App = () => {
   return (
     <div className='app-container bg-main min-h-screen'>
-      <div>
+      <div className='min-h-[84px]'>
         <Navbar />
       </div>
       <div>

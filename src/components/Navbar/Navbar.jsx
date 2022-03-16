@@ -1,7 +1,7 @@
 import React,{ useState } from 'react';
 import { Link } from 'react-router-dom'
 import logo from '../../images/logo.png';
-import { HomeIcon,CurrencyPoundIcon,NewspaperIcon,ChartBarIcon,MenuAlt3Icon } from '@heroicons/react/solid';
+import { HomeIcon,CurrencyPoundIcon,NewspaperIcon,ChartBarIcon,MenuAlt3Icon,XIcon } from '@heroicons/react/solid';
 import './styles.css';
 
 
@@ -35,7 +35,7 @@ const Navbar = () => {
         <Link to="/">
           <div className='cryptoverse__container-brand'>
               <img src={logo} alt="Cryptoverse Logo" />
-              <h1 className='gradient-text'>Cryptoverse</h1>
+              <h1 className='unique-text hidden md:block'>Cryptoverse</h1>
           </div>
         </Link>
         <div className='cryptoverse__container-links-container'>
@@ -43,11 +43,13 @@ const Navbar = () => {
         </div>
         <div className='cryptoverse__container-menu'>
           <button className='cryptoverse__container-menu-button' onClick={() => setToggleMenu(!toggleMenu)}>
-            <MenuAlt3Icon className='cryptoverse__container-menu-button-icon' />
+            {
+              !toggleMenu ? <MenuAlt3Icon className='cryptoverse__container-menu-button-icon' /> : <XIcon className='cryptoverse__container-menu-button-icon' />
+            }
           </button>
           {
             toggleMenu && (
-              <div className='cryptoverse__container-mobile-links-container'>
+              <div className='cryptoverse__container-mobile-links-container scale-up-center'>
                   <MenuItems />
               </div>
             )

@@ -2,10 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-.app-container {
-  @apply w-screen min-h-screen;
+body {
+  @apply overflow-x-hidden;
 }
 
-.gradient-text {
-  @apply text-transparent from-text-blue to-text-red bg-clip-text bg-gradient-to-r  font-bold font-main;
+.app-container {
+  @apply w-full min-h-screen;
+}
+
+.unique-text {
+  @apply text-transparent from-text-blue to-text-red bg-clip-text font-bold font-main bg-gradient-to-r;
+}
+
+.section__padding {
+  @apply px-16 py-8;
+}
+
+@media screen and (max-width: 1050px) {
+  .section__padding {
+    @apply px-12 py-6;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .section__padding {
+    @apply px-8 py-4;
+  }
+}
+
+.scale-up-center {
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }

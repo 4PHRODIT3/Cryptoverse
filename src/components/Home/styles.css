@@ -1,0 +1,42 @@
+.cryptoverse__home {
+  @apply xl:py-0;
+}
+
+.cryptoverse__home-intro {
+  @apply flex flex-col-reverse xl:flex-row items-center mb-14 xl:mb-0;
+}
+
+.cryptoverse__home-intro__contents h1 {
+  @apply text-[2rem] xl:text-[2.8rem] xl:leading-[64px];
+}
+.cryptoverse__home-intro__contents p {
+  @apply font-main text-lg xl:text-xl my-10 pr-0 xl:pr-16 leading-8 xl:leading-[2rem];
+}
+
+.cryptoverse__home-intro__contents button {
+  @apply py-3 px-6 border-2 border-white text-lg font-main;
+}
+
+.cryptoverse__home-intro__img img {
+  @apply min-h-full xl:min-h-screen;
+  background-size: cover;
+}
+
+.cryptoverse__home-stats {
+  @apply bg-secondary flex flex-wrap items-center justify-between rounded py-8 px-10 xl:py-14 xl:px-16;
+}
+
+.cryptoverse__home-stats-card {
+  @apply max-w-[240px] mx-auto my-4 md:my-3 xl:my-0 md:max-w-[180px] font-main text-white;
+}
+
+.cryptoverse__home-stats-card img {
+  @apply max-w-full min-h-[150px];
+}
+
+.cryptoverse__home-stats-card h1 {
+  @apply text-xl xl:text-3xl mt-8 text-center;
+}
+.cryptoverse__home-stats-card p {
+  @apply text-center my-5 leading-loose;
+}

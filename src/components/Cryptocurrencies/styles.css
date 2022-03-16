@@ -1,0 +1,48 @@
+.cryptoverse__cryptocurrencies-header {
+  @apply flex flex-col md:flex-row justify-between items-center mb-10 md:mb-0;
+}
+.cryptoverse__cryptocurrencies-header h1 {
+  @apply text-3xl md:text-4xl md:my-10 md:mb-20 my-10 leading-loose;
+}
+
+.cryptoverse__cryptocurrencies-header input {
+  @apply bg-secondary px-4 py-2 min-w-[300px] focus:outline-none rounded text-white;
+}
+
+.crytoverse__cryptocurrencies-cards-container {
+  @apply grid gap-10 grid-cols-1 md:grid-cols-2 xl:grid-cols-4;
+}
+
+.cyptoverse__cryptocurrencies-card {
+  @apply w-[300px] bg-card py-6 px-8 rounded border-2 border-white hover:cursor-pointer hover:scale-105 transition ease-linear duration-300;
+}
+
+.cyptoverse__cryptocurrencies-card-header {
+  @apply flex justify-between items-center mb-8;
+}
+
+.cyptoverse__cryptocurrencies-card-header h1 {
+  @apply text-2xl text-white;
+}
+
+.cyptoverse__cryptocurrencies-card-header img {
+  @apply w-[50px] h-[50px];
+}
+
+.cyptoverse__cryptocurrencies-card-contents {
+  @apply text-white my-5 font-main;
+}
+
+.cyptoverse__cryptocurrencies-card-contents h1 {
+  @apply text-lg leading-[34px];
+}
+
+.cryptoverse__cryptocurrencies-link {
+  @apply text-xl md:text-2xl font-main text-text-red hover:-translate-x-3 transition ease-linear duration-300;
+}
+
+@media screen and (min-width: 1500px) {
+  .cyptoverse__cryptocurrencies-card {
+    @apply w-[400px];
+  }
+}
