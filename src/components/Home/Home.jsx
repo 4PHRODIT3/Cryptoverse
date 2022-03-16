@@ -4,6 +4,7 @@ import { millify } from 'millify'
 import './styles.css';
 import { intro,totalCryptos,exchange,volume,marketCup,totalMarket } from '../../images';
 import Cryptocurrencies from '../Cryptocurrencies/Cryptocurrencies';
+import News from '../News/News';
 
 const Home = () => {
     const { data,isFetching,isError } = useGetCryptosQuery(50);
@@ -50,6 +51,9 @@ const Home = () => {
             </div>
             <div>
                 <Cryptocurrencies simplifed={true} />
+            </div>
+            <div>
+                <News simplifed={true} />
             </div>
         </div>
     )

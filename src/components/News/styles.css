@@ -1,0 +1,96 @@
+.cryptoverse__news {
+  @apply my-3;
+}
+
+.cryptoverse__news-header {
+  @apply text-3xl md:text-4xl md:my-10 my-10 leading-loose text-white font-main flex flex-col md:flex-row items-center justify-between;
+}
+
+.cryptoverse___news-cards-container {
+  @apply flex flex-wrap items-center justify-between mx-40;
+}
+
+.cryptoverse__news-card {
+  @apply bg-secondary w-[460px] px-8 py-10  rounded hover:cursor-pointer hover:scale-[1.03] transition ease-linear duration-300 mb-8;
+}
+.cryptoverse__news-card__header {
+  @apply flex justify-between items-center;
+}
+.cryptoverse__news-card__header img {
+  @apply w-[100px] h-[100px];
+}
+.cryptoverse__news-card__header h1 {
+  @apply text-lg md:text-xl font-main text-card-title ml-4;
+}
+
+.cryptoverse__news-card__contents {
+  @apply py-8;
+}
+
+.cryptoverse__news-card__contents-description {
+  @apply text-base md:text-lg font-main text-white;
+  line-height: 2rem !important;
+}
+
+.cryptoverse__news-card__footer {
+  @apply flex justify-between items-center;
+}
+
+.cryptoverse__news-card__footer-provider {
+  @apply flex items-center;
+}
+
+.cryptoverse__news-card__footer-provider img {
+  @apply w-[50px] h-[50px] mr-4;
+}
+
+.cryptoverse__news-card__footer p {
+  @apply text-main text-white-50 text-base md:text-lg;
+}
+
+.cryptoverse__news-filter {
+  @apply relative inline-block w-full;
+}
+
+.cryptoverse__news-filter-input {
+  @apply w-[250px] h-[40px] px-4 font-main text-base text-white rounded focus:outline-none hover:cursor-pointer bg-secondary;
+}
+.cryptoverse__news-filter-input option {
+  @apply py-4;
+}
+.cryptoverse__news-link {
+  @apply text-xl md:text-2xl font-main text-text-red hover:-translate-x-3 transition ease-linear duration-300 md:my-10 md:mb-20;
+}
+
+@media screen and (max-width: 1366px) {
+  .cryptoverse___news-cards-container {
+    @apply mx-10;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .cryptoverse__news-card {
+    @apply w-[100%];
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cryptoverse___news-cards-container {
+    @apply mx-0;
+  }
+  .cryptoverse__news-card__header {
+    @apply flex-col;
+  }
+  .cryptoverse__news-card__header img {
+    @apply w-full h-full mb-6;
+  }
+  .cryptoverse__news-card__header h1 {
+    @apply ml-0;
+  }
+  .cryptoverse__news-card__footer {
+    @apply flex-col items-start;
+  }
+  .cryptoverse__news-card__footer p {
+    @apply mt-3;
+  }
+}

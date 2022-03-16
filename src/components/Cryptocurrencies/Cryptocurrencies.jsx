@@ -31,7 +31,8 @@ const Cryptocurrencies = ({simplifed}) => {
       <div className='crytoverse__cryptocurrencies-cards-container'>
       {
           filteredValues?.map((data,index) => (
-            <div className='cyptoverse__cryptocurrencies-card' key={data.name+index}>
+            <Link  key={data.name+index} to={`/cryptocurrency/${data.uuid}`}>
+              <div className='cyptoverse__cryptocurrencies-card'>
               <div className='cyptoverse__cryptocurrencies-card-header'>
                 <h1>{`${index+1}. ${data.name}`}</h1>
                 <img src={data.iconUrl} alt="Coin Logo" />
@@ -42,6 +43,7 @@ const Cryptocurrencies = ({simplifed}) => {
                 <h1>Daily Change: { millify(data.change) }</h1>
               </div>
             </div>
+            </Link>
           ))
       }
       </div>

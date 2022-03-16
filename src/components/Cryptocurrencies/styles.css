@@ -10,7 +10,7 @@
 }
 
 .crytoverse__cryptocurrencies-cards-container {
-  @apply grid gap-10 grid-cols-1 md:grid-cols-2 xl:grid-cols-4;
+  @apply grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
 }
 
 .cyptoverse__cryptocurrencies-card {
@@ -38,11 +38,17 @@
 }
 
 .cryptoverse__cryptocurrencies-link {
-  @apply text-xl md:text-2xl font-main text-text-red hover:-translate-x-3 transition ease-linear duration-300;
+  @apply text-xl md:text-2xl font-main text-text-red hover:-translate-x-3 transition ease-linear duration-300 md:my-10 md:mb-20;
 }
 
 @media screen and (min-width: 1500px) {
   .cyptoverse__cryptocurrencies-card {
     @apply w-[400px];
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .cyptoverse__cryptocurrencies-card {
+    @apply mx-auto;
   }
 }
