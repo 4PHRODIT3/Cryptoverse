@@ -5,11 +5,12 @@ import './styles.css';
 import { intro,totalCryptos,exchange,volume,marketCup,totalMarket } from '../../images';
 import Cryptocurrencies from '../Cryptocurrencies/Cryptocurrencies';
 import News from '../News/News';
+import Loader from '../Microcomponents/Loader/Loader';
 
 const Home = () => {
     const { data,isFetching,isError } = useGetCryptosQuery(50);
     const globalData = data?.data?.stats;
-    if(isFetching) return (<div>Loading...</div>)
+    if(isFetching) return (<Loader />)
     return (
         <div className='cryptoverse__home section__padding'>
             <div className='cryptoverse__home-intro bg-intro-bg'>

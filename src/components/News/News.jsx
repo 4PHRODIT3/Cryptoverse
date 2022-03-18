@@ -6,16 +6,16 @@ import { useGetCryptoNewsQuery } from '../../services/cryptoNewsApi';
 import { useGetCryptosQuery } from '../../services/cryptoApi';
 import SelectBox from '../Microcomponents/SelectBox/SelectBox';
 import './styles.css';
+import Loader from '../Microcomponents/Loader/Loader';
 
 const News = ({simplifed}) => {
   const placeholderImg = "https://www.bing.com/th?id=OVFT.mpzuVZnv8dwIMRfQGPbOPC&pid=News";
-  const { data: cryptoData } = useGetCryptosQuery(50);
+  const { data: cryptoData,isFetching : cryptoDataIsFetching } = useGetCryptosQuery(50);
   const coinData = cryptoData?.data?.coins;
   const [category,setCategory] = useState("Cryptocurrency");
-  const { data,isFetching } = useGetCryptoNewsQuery({category,limit : simplifed ? "6" : '13'});
+  const { data,isFetching : newsDataIsFetching } = useGetCryptoNewsQuery({category,limit : simplifed ? "7" : '13'});
 
-  if(isFetching) return (<div>Loading...</div>);
-
+  if(cryptoDataIsFetching || newsDataIsFetching) return (<Loader />);
   return (
     <div className={`cyptoverse__news ${simplifed ? "pt-8" : "px-8"}`}>
       <div className='cryptoverse__news-header'>

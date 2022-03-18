@@ -2,6 +2,7 @@ import millify from 'millify';
 import React,{ useState,useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useGetCryptosQuery } from '../../services/cryptoApi';
+import Loader from '../Microcomponents/Loader/Loader';
 import './styles.css';
 
 const Cryptocurrencies = ({simplifed}) => {
@@ -18,7 +19,7 @@ const Cryptocurrencies = ({simplifed}) => {
     }
   },[searchValue,data]);
 
-  if(isFetching) return (<div className='text-white'>Loading...</div>);
+  if(isFetching) return (<Loader />);
   
   return (
     <div className={`cyptoverse__cryptocurrencies ${simplifed ? "pt-8" : "px-8"}`}>

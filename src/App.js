@@ -1,6 +1,6 @@
 import React from 'react';
 import "./index.css";
-import { Navbar,Home,Cryptocurrencies,News,Exchanges,CryptoDetails } from './components';
+import { Navbar,Home,Cryptocurrencies,News,Exchanges,CryptoDetails,Footer } from './components';
 import { Routes, Route } from 'react-router-dom';
 
 const App = () => {
@@ -17,6 +17,9 @@ const App = () => {
           <Route path='/cryptocurrency/:coinID' element={<CryptoDetails />} />
           <Route path='/news' element={<News />} />
         </Routes>
+      </div>
+      <div>
+         <Footer />
       </div>
     </div>
   )

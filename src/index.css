@@ -11,7 +11,7 @@ body {
 }
 
 .unique-text {
-  @apply text-transparent from-text-blue to-text-red bg-clip-text font-bold font-main bg-gradient-to-r;
+  @apply text-transparent from-text-blue to-text-red bg-clip-text font-main bg-gradient-to-r font-medium;
 }
 
 .section__padding {

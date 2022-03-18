@@ -16,10 +16,10 @@ const MenuItems = () => {
         <CurrencyPoundIcon className='cryptoverse__container-links-container__link__icon' />
         <Link className='cryptoverse__container-links-container__link__text' to="/cryptocurrencies">Cryptocurrencies</Link>
       </div>
-      <div className='cryptoverse__container-links-container__link group'>
+      {/* <div className='cryptoverse__container-links-container__link group'>
         <ChartBarIcon className='cryptoverse__container-links-container__link__icon' />
         <Link className='cryptoverse__container-links-container__link__text' to="/exchanges">Exchanges</Link>
-      </div>
+      </div> */}
       <div className='cryptoverse__container-links-container__link group'>
         <NewspaperIcon className='cryptoverse__container-links-container__link__icon' />
         <Link className='cryptoverse__container-links-container__link__text' to="/news">News</Link>

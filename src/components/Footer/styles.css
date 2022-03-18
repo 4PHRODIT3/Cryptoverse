@@ -1,0 +1,11 @@
+.cryptoverse__footer {
+  @apply flex flex-wrap justify-center items-center py-8 xl:py-10;
+}
+
+.cryptoverse__footer h6 {
+  @apply font-main text-white-50 text-sm md:text-base cursor-pointer;
+}
+
+.cryptoverse__footer p {
+  @apply text-center my-3 text-white-50 font-main cursor-pointer;
+}

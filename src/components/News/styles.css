@@ -1,13 +1,13 @@
 .cryptoverse__news {
-  @apply my-3;
+  @apply mt-3;
 }
 
 .cryptoverse__news-header {
-  @apply text-3xl md:text-4xl md:my-10 my-10 leading-loose text-white font-main flex flex-col md:flex-row items-center justify-between;
+  @apply text-3xl md:text-4xl lg:my-10 xl:my-14 mb-6 leading-loose text-white font-main flex flex-col md:flex-row items-center justify-between;
 }
 
 .cryptoverse___news-cards-container {
-  @apply flex flex-wrap items-center justify-between mx-40;
+  @apply flex flex-wrap items-center justify-between mx-40 mt-4 md:mt-8;
 }
 
 .cryptoverse__news-card {
