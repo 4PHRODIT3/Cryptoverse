@@ -1,0 +1,21 @@
+.cryptoverse__microcomponents__select {
+  @apply relative inline-block w-full;
+}
+
+.cryptoverse__microcomponents__select-input {
+  @apply w-[250px] h-[40px] px-4 font-main text-base text-white rounded focus:outline-none hover:cursor-pointer bg-secondary;
+  appearance: none;
+  background-image: url("../../../images/angle.png");
+  background-repeat: no-repeat;
+  background-position: right 0.8rem center;
+  background-size: 1em;
+}
+.cryptoverse__microcomponents__select-input option {
+  @apply py-4;
+}
+
+@media screen and (max-width: 300px) {
+  .cryptoverse__microcomponents__select-input {
+    @apply w-full;
+  }
+}

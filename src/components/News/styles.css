@@ -42,26 +42,19 @@
 
 .cryptoverse__news-card__footer-provider img {
   @apply w-[50px] h-[50px] mr-4;
+  background-size: cover;
 }
 
-.cryptoverse__news-card__footer p {
-  @apply text-main text-white-50 text-base md:text-lg;
+.cryptoverse__news-card__footer p:not(.cryptoverse__news-card__footer-time) {
+  @apply text-white-50 text-xs md:text-sm;
 }
 
-.cryptoverse__news-filter {
-  @apply relative inline-block w-full;
-}
-
-.cryptoverse__news-filter-input {
-  @apply w-[250px] h-[40px] px-4 font-main text-base text-white rounded focus:outline-none hover:cursor-pointer bg-secondary;
-}
-.cryptoverse__news-filter-input option {
-  @apply py-4;
-}
 .cryptoverse__news-link {
   @apply text-xl md:text-2xl font-main text-text-red hover:-translate-x-3 transition ease-linear duration-300 md:my-10 md:mb-20;
 }
-
+.cryptoverse__news-card__footer-time {
+  @apply capitalize text-white-50 text-xs md:text-sm;
+}
 @media screen and (max-width: 1366px) {
   .cryptoverse___news-cards-container {
     @apply mx-10;

@@ -4,6 +4,7 @@ import React,{ useEffect,useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useGetCryptoNewsQuery } from '../../services/cryptoNewsApi';
 import { useGetCryptosQuery } from '../../services/cryptoApi';
+import SelectBox from '../Microcomponents/SelectBox/SelectBox';
 import './styles.css';
 
 const News = ({simplifed}) => {
@@ -21,18 +22,10 @@ const News = ({simplifed}) => {
         <h1>Latest Crypto News</h1>
         {
           !simplifed ? (
-            <form>
-              <div className="cryptoverse__news-filter">
-                <select className="cryptoverse__news-filter-input" onChange={(e) => setCategory(e.target.value)} value={category}>
-                  {
-                    coinData?.map((coin) => (
-                      <option key={coin.name} value={coin.name}>{coin.name}</option>
-                    ))
-                  }
-                </select>
-                
-              </div>
-            </form>) : (<Link to="/news"><h3 className='cryptoverse__news-link'>Read More</h3></Link>)
+
+            <SelectBox setState={setCategory} state={category} options={coinData.map((coin) => coin.name)} />
+
+          ) : (<Link to="/news"><h3 className='cryptoverse__news-link'>Read More</h3></Link>)
         }
       </div>
       <div className='cryptoverse___news-cards-container'>
@@ -52,7 +45,7 @@ const News = ({simplifed}) => {
                       <img src={ article.provider[0].image?.thumbnail?.contentUrl || placeholderImg } alt="Provider Icon" />
                       <p>{ article.provider[0].name }</p>
                     </div>
-                    <p>{ moment(article.datePublished).startOf('ss').fromNow() }</p>
+                    <p className='cryptoverse__news-card__footer-time'>{ moment(article.datePublished).startOf('ss').fromNow() }</p>
                 </div>
               </div>
             </Link>
