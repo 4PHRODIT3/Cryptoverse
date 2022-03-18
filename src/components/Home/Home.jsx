@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ createRef } from 'react';
 import { useGetCryptosQuery } from '../../services/cryptoApi';
 import { millify } from 'millify'
 import './styles.css';
@@ -10,6 +10,7 @@ import Loader from '../Microcomponents/Loader/Loader';
 const Home = () => {
     const { data,isFetching,isError } = useGetCryptosQuery(50);
     const globalData = data?.data?.stats;
+    const nextSectionRef = createRef();
     if(isFetching) return (<Loader />)
     return (
         <div className='cryptoverse__home section__padding'>
@@ -17,13 +18,13 @@ const Home = () => {
                 <div className='text-white cryptoverse__home-intro__contents'>
                     <h1 className='unique-text'>What is Cryptoverse?</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum ex consectetur ut perspiciatis esse corrupti, cumque nobis unde! Rerum at deleniti eperiam quidem fuga. Lorem ipadipisicing elit. Voluptatum totam tenetur suscipit dolorem dolores quas nesciunt nulla sapi.</p>
-                    <button>Get Started</button>
+                    <button onClick={() => nextSectionRef.current.scrollIntoView({behaviour : "smooth",block : "start"})}>Let's Explore</button>
                 </div>
                 <div className='cryptoverse__home-intro__img'>
                     <img src={intro} alt="Cryptoverse Intro Illustration" />
                 </div>
             </div>
-            <div className='cryptoverse__home-stats'>
+            <div className='cryptoverse__home-stats' ref={nextSectionRef}>
                 <div className='cryptoverse__home-stats-card'>
                     <img src={totalCryptos} alt="total cryptocurrencies illustration" />
                     <h1>{ millify(globalData.total) }</h1>
